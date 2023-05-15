@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Starbucks Website Landing Page</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<section>
+		<div class="circle"></div>
+		<header>
+			<a href="#"><img src="img/logo.png" class="logo"></a>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Menu</a></li>
+				<li><a href="#">What's</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</header>
+		<div class="content">
+			<div class="textBox">
+				<h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+				<p>At Starbucks, we believe that coffee is not just a beverage; it's an art form. From sourcing the finest Arabica beans from around the world to carefully crafting each cup with precision and care, we strive to deliver an extraordinary taste that will captivate your palate and leave you craving for more.</p>
+				<a href="#">Learn More</a>
+			</div>
+			<div class="imgBox">
+				<img src="img/green.png" class="starbucks">
+			</div>
+		</div>
+		<ul class="thumb">
+			<li><img src="img/green.png" onclick="imgSlider('img/green.png');changeCircleColor('#017143')"></li>
+			<li><img src="img/pink.png" onclick="imgSlider('img/pink.png');changeCircleColor('#eb7495')"></li>
+			<li><img src="img/purple.png" onclick="imgSlider('img/purple.png');changeCircleColor('#d752b1')"></li>
+		</ul>
+		<ul class="sci">
+			<li><a href="#"><img src="img/facebook.png"></a></li>
+			<li><a href="#"><img src="img/instagram.png"></a></li>
+			<li><a href="#"><img src="img/twitter.png"></a></li>
+		</ul>
+	</section>
+
+	<script type="text/javascript">
+		function imgSlider(anything) {
+			document.querySelector('.starbucks').src = anything;
+			document.querySelector('.starbucks').style.width = '340px'; // Shtoni këtë linjë për të vendosur madhësinë e fiksuara të imazhit
+		}
+
+		function changeCircleColor(color) {
+			const circle = document.querySelector('.circle');
+			circle.style.background = color;
+		}
+	</script>
+</body>
+</html>
